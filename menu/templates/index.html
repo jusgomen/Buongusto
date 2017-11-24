@@ -1,0 +1,72 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+  <!--banner-->
+  {% include "base/home_banner.html" %}
+  <!-- /banner-->
+{% endblock %}
+
+{% block content %}
+
+  <!--about-->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center marb-35">
+          <h1 class="header-h">About us</h1>
+          <p class="header-p"></p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="col-md-6 col-sm-6">
+            <div class="about-info text-center">
+              <h2 class="heading"></h2>
+              <p>A steward of culinary elegance and luxury, offering a refined menu inspired by the regional cuisines of Italy and a nationally recognized wine program. Centrally located between the White House and the Capitol, Buongusto is a destination for politicos, diplomats, and savvy diners with an appreciation for sophisticated food and ambiance.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <img src="/static/img/dessert.jpg" alt="" class="img-responsive">
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </section>
+  <!--/about-->
+
+  <!--event-->
+  <section id="event">
+    <div class="bg-color" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center" style="padding:60px;">
+            <h1 class="header-h">The Bar at Buongusto</h1>
+          </div>
+          <div class="col-md-12" style="padding-bottom:60px;">
+            <div class="item active left">
+              <div class="col-md-6 col-sm-6 left-images">
+                <img src="/static/img/crystal.jpg" class="img-responsive">
+              </div>
+              <div class="col-md-6 col-sm-6 details-text">
+                <div class="content-holder text-center">
+                  <h2>Bar</h2>
+                  <p>The Bar at Buongusto is just as important as our dining room. It's contemporary design seats up to 25 guests comfortably on the stools and banquettes. The bar is "the" place to enjoy our classic and modern cocktails along with our full menu. Happy Hour is Monday to Friday from 4pm to 7pm, featuring drink and food specials. Thursdays and Saturdays are featured Ladies’ Nights, where we pour a complimentary glass of sparkling rose for ladies at Buongusto Bar and on the Patio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/event-->
+
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery.easing.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/jquery.mixitup.min.js"></script>
+  <script src="/static/js/custom.js"></script>
+  <script src="/static/contactform/contactform.js"></script>
+
+{% endblock %}

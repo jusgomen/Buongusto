@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+  <!--banner-->
+  {% include "base/banner.html" %}
+  <!-- /banner-->
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<h1></h1>
+	</div>
+
+  {% for table in tables_info %}
+	<div class="row-center">
+
+		<div class="col-xs-2">
+			<div class="thumbnail">
+				<img src="/static/img/dinner.png" class="img-rounded"/>
+				<div class="caption text-center">
+					<h4><b>Table No.{{table.table}}</b></h4>
+
+          {% if table.available %}
+					<h5>Status: Available </h5>
+          {% endif %}
+
+          {% if not table.available %}
+					<h5>Status: Unavailable </h5>
+          {% endif %}
+
+				</div>
+			</div>
+		</div>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

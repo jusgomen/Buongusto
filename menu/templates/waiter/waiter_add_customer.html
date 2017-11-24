@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+  <!--banner-->
+  {% include "base/banner.html" %}
+  <!-- /banner-->
+{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top:40px; margin-bottom:40px;">
+	<div class="col-md-12 text-center marb-35">
+  		<form action="" method="post">
+  			{% csrf_token %}
+      		{{ form.as_p }}
+      		<input class="btn btn-warning" type="submit" value="Add customer" />
+ 	    </form>
+	</div>
+</div>
+{% endblock %}

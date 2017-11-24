@@ -1,0 +1,88 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+  <!--banner-->
+  {% include "base/banner.html" %}
+  <!-- /banner-->
+{% endblock %}
+
+{% block content %}
+<section id="current-customers" class="section-padding">
+    <div class="container">
+    	<div class="row" style="margin-bottom: 20px;">
+    		<div class="col-sm-10">
+    			<h3 class="text-left ">
+    				Your current customers
+    			</h3>
+    		</div>
+    		<div class="col-sm-2" >
+    			<form action="{% url 'add-customer' %}" >
+				    <input type="submit" value="Add customer" class="btn btn-warning" />
+				</form>
+    		</div>
+    	</div>
+
+    </div>
+    <div class="container table-responsive">
+
+    	<table class="table table-striped">
+		  <tr>
+		  	{% for feature_c in features_c %}
+		    <th class="warning">{{ feature_c }}</th>
+		    {% endfor %}
+		  </tr>
+
+		  {% for customer_info in customers_info  %}
+		  <tr>
+		  	{% for info_c in customer_info %}
+		    <td>{{ info_c }}</td>
+		    {% endfor %}
+		  </tr>
+		  {% endfor %}
+
+		</table>
+
+    </div>
+</section>
+
+<section id="current-orders" class="section-padding">
+    <div class="container">
+    	<div class="row" style="margin-bottom: 20px;">
+    		<div class="col-sm-10">
+    			<h3 class="text-left ">
+    				Your current orders
+    			</h3>
+    		</div>
+    		<div class="col-sm-2" >
+    			<form action="{% url 'add-order' %}" >
+				    <input type="submit" value="Add order" class="btn btn-warning" />
+				</form>
+    		</div>
+    	</div>
+
+    </div>
+    <div class="container table-responsive">
+
+    	<table class="table table-striped">
+		  <tr>
+		  	{% for feature in features %}
+		    <th class="warning">{{ feature }}</th>
+		    {% endfor %}
+		  </tr>
+
+		  {% for order_info in orders_info  %}
+		  <tr>
+		  	{% for info in order_info %}
+		    <td>{{ info }}</td>
+		    {% endfor %}
+		  </tr>
+		  {% endfor %}
+
+		</table>
+
+    </div>
+</section>
+
+
+
+{% endblock %}

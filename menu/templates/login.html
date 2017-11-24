@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+  <!--banner-->
+  {% include "base/banner.html" %}
+  {% include "base/navbar_customer.html" %}
+  <!-- /banner-->
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+      <div class="row">
+        	<div class="col-md-12 text-center marb-35">
+          		<h1 class="header-h">Log in</h1>
+        	</div>
+      </div>
+      <div class="row">
+       <div class="col-md-3 text-center marb-35">
+       </div>
+        <div class="col-md-6 text-center marb-35">
+      <form action="/login/" method="post">
+			{% csrf_token %}
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="form-group text-center">
+						<label>Username</label>
+						<input class="form-control" type="text" name="username">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="form-group text-center">
+						<label>Password</label>
+						<input class="form-control" type="password" name="password">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="form-group text-center">
+						<a href="/signin">New user? Sign up now!</a>
+					</div>
+				</div>
+			</div>
+			<input type="submit" value="Log in" class="btn btn-warning" style="margin: 20px;"/>
+	  </form>
+	</div>
+	<div class="col-md-3 text-center marb-35">
+    </div>
+   </div>
+</div>
+{% endblock %}

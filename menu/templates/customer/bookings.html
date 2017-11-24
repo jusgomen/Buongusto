@@ -1,0 +1,94 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+  <!--banner-->
+  {% include "base/banner.html" %}
+  {% include "base/navbar_customer.html" %}
+  <!-- /banner-->
+{% endblock %}
+
+{% block content %}
+
+<!--booking-form-->
+<section id="booking-form" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 text-center marb-35">
+        </div>
+        <div class="col-md-6 text-center marb-35">
+          <form action="/bookings/" method="post">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>Name:</label>
+                    <input class="form-control" type="text" name="name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>Telephone:</label>
+                    <input class="form-control" type="text" name="telephone">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>Email:</label>
+                    <input class="form-control" type="text" name="email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>Date:</label>
+                    <input class="form-control" type="text" name="date" placeholder="dd/mm/aa">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>Time:</label>
+                    <input class="form-control" type="text" name="time" placeholder="12:00">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>People:</label>
+                    <input class="form-control" type="text" name="people" placeholder="Maximum 4">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="form-group text-center">
+                    <label>Comments:</label>
+                    <input class="form-control" type="text" name="comments" placeholder="Do you have a special request?">
+                  </div>
+                </div>
+              </div>
+              <input type="submit" value="Book table" class="btn btn-warning" style="margin: 20px;"/>
+          </form>
+        </div>
+        <div class="col-md-3 text-center marb-35">
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--/menu-->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery.easing.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.mixitup.min.js"></script>
+<script src="/static/js/custom.js"></script>
+<script src="/static/contactform/contactform.js"></script>
+
+{% endblock %}
